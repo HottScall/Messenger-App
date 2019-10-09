@@ -13,6 +13,7 @@ class MessagesController < ApplicationController
         redirect_to '/messages'
       else
         render 'new'
+      end 
   end
 
   private
@@ -20,4 +21,5 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:content)
   end
+
 end
